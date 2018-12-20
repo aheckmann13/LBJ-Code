@@ -9,19 +9,18 @@
 
 //NB Sections Array
 //var n = 1;
-for (n=1; n < 110; n+1) {
-    var NBsections = ["NB" + n];
-    console.log(NBsections);
-    n++;
- }
- 
- 
+var NBsections = [];
+for (var n = 1; n < 50; n++) {
+    var sectionNum = "NB" + n ;
+    NBsections.push(sectionNum);
+}
+console.log(NBsections);
+
  //Array to hold all sections on the project.
  //*Try to figure out the best way to do this. There are over 270 sections*
- var allSections = [];
- 
+//  var allSections = [];
+
  //Q1 randomly chosen sections
  //*Do I need to create a variable for Quarter? That would be approx 20 variable to cover all sections.*
- var Q1 = allSections[Math.floor(Math.random() * allSections.length)];
- 
- 
+//  var Q1 = allSections[Math.floor(Math.random() * allSections.length)];
+
