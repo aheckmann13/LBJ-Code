@@ -8,19 +8,46 @@
 //ie "NB"+x where x is the number from 1 to total number in that direction.
 
 //NB Sections Array
-//var n = 1;
 var NBsections = [];
-for (var n = 1; n < 50; n++) {
-    var sectionNum = "NB" + n ;
+for (var n = 1; n <= 50; n++) {
+    let sectionNum = "NB" + n;
     NBsections.push(sectionNum);
 }
-console.log(NBsections);
+// console.log(NBsections);
 
- //Array to hold all sections on the project.
- //*Try to figure out the best way to do this. There are over 270 sections*
-//  var allSections = [];
+//SB Sections Array
+var SBsections = [];
+for (var s = 1; s <= 50; s++) {
+    let sectionNum = "SB" + s;
+    SBsections.push(sectionNum);
+}
+// console.log(SBsections);
 
- //Q1 randomly chosen sections
- //*Do I need to create a variable for Quarter? That would be approx 20 variable to cover all sections.*
-//  var Q1 = allSections[Math.floor(Math.random() * allSections.length)];
+//EB Sections Array
+var EBsections = [];
+for (var e = 1; e <= 50; e++) {
+    let sectionNum = "EB" + e;
+    EBsections.push(sectionNum);
+}
+// console.log(EBsections);
 
+//WB Sections Array
+var WBsections = [];
+for (var w = 1; w <= 50; w++) {
+    let sectionNum = "WB" + w;
+    WBsections.push(sectionNum);
+}
+// console.log(WBsections);
+
+//Array to hold all sections on the project.
+//*Try to figure out the best way to do this. There are over 270 sections*
+var allSections = [].concat.apply([], [NBsections, SBsections, EBsections, WBsections]);
+// allSections.push(NBsections + SBsections + EBsections + WBsections);
+
+console.log(allSections);
+
+//Q1 randomly chosen sections
+//*Do I need to create a variable for Quarter? That would be approx 20 variable to cover all sections.*
+// var Q1 = allSections[Math.floor(Math.random() * allSections.length)];
+
+// console.log(Q1);
