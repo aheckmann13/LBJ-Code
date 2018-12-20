@@ -42,22 +42,44 @@ window.onload = function () {
     // console.log(WBsections);
 
     //Array to hold all sections on the project.
-    //*Try to figure out the best way to do this. There are over 270 sections*
     var allSections = [].concat.apply([], [NBsections, SBsections, EBsections, WBsections]);
     // allSections.push(NBsections + SBsections + EBsections + WBsections);
 
-    console.log(allSections);
+    //console.log(allSections);
+
+    //Array for the remaining sections
+    var sectionsChosen = [];
+
 
     //Q1 randomly chosen sections
     //*Do I need to create a variable for each Quarter? That would be approx 20 variable to cover all sections.*
     var i = 1;
     var Q1 = [];
     while (i < 15) {
-        var rand = allSections[Math.floor(Math.random() * allSections.length)];
-        Q1.push(rand);
-        i++;
+        let rand = allSections[Math.floor(Math.random() * allSections.length)];
+        //if (rand != sectionsChosen) 
+        if (sectionsChosen.indexOf(rand) === -1){
+            Q1.push(rand);
+            sectionsChosen.push(rand);
+            //console.log(sectionsChosen);
+            i++;
+        }
     }
-    console.log(Q1);
+    console.log("Q1 Audit Sections: " + Q1);
+
+    var j = 1;
+    var Q2 = [];
+    while (j < 15) {
+        let rand = allSections[Math.floor(Math.random() * allSections.length)];
+        console.log(rand);         
+        //if (rand != sectionsChosen)
+        if (sectionsChosen.indexOf(rand) === -1) {
+            Q2.push(rand);
+            sectionsChosen.push(rand);
+            j++;
+        }
+    }
+    console.log("Q2 Audit Sections: " + Q2);
 
 
 };
