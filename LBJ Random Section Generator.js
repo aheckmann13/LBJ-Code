@@ -8,12 +8,13 @@
 //ie "NB"+x where x is the number from 1 to total number in that direction.
 
 //NB Sections Array
-var n = 1;
-while (n < 110) {
+//var n = 1;
+for (n=1; n < 110; n+1) {
     var NBsections = ["NB" + n];
+    console.log(NBsections);
     n++;
  }
- document.write(NBsections);
+ 
  
  //Array to hold all sections on the project.
  //*Try to figure out the best way to do this. There are over 270 sections*
